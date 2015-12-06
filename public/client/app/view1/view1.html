@@ -1,0 +1,28 @@
+	<div class="container" ng-controller="SearchCtrl">
+		<h1> Twitter Search App </h1>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Enter string to search:</th>
+					<th><input class="form-control" ng-model="string.text"></th>
+					<th><button class="btn btn-primary" ng-click="submit()">Submit</button></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr> 
+					<td>Username</td>
+					<td>User</td>
+					<td>Created At</td>
+				</tr>
+				<tr ng-repeat="string in stringlist"> 
+					<td>{{string.fromUser}}</td>
+					<td>{{string.fromUserName}}</td>
+					<td>{{string.createdAt}}</td>
+					<td> <a class="btn btn-primary" ng-href="#/view2/{{string._id}}" >View Data/ Add Comment</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>

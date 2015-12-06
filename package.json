@@ -1,0 +1,11 @@
+{
+  "name": "twitter-app",
+  "version": "0.0.1",
+  "description": "CRUD for Twitter Data",
+  "devDependencies": {},
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mongojs": "^2.0.0"
+  }
+}
