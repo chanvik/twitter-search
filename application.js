@@ -10,7 +10,7 @@ TwitterApi.prototype.init = function(){
 	var self = this;
 	var app = express();
 	//connecttion to db
-	var db =mongojs('twitter',['tweets']);
+	var db = mongojs('twitter',['tweets']);
 	//save db instance 
 	app.set('db',db);
 	//parsing request objects
