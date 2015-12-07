@@ -31,10 +31,12 @@ angular.module('myApp.view2', ['ngRoute'])
 			response.forEach(function(data){
 				var tweet = data;
 				var comment = [];
-				tweet.comment.forEach(function(data){
-					comment.push({text:data});
-				})
-				tweet.comment = comment;
+				if(tweet.comment){
+					tweet.comment.forEach(function(data){
+						comment.push({text:data});
+					})
+					tweet.comment = comment;
+				}
 				var dateTime = new Date(tweet.createdAt)
 				tweet.createdAt =  dateTime.getMonth()  + "/" + dateTime.getDay() + "/" + dateTime.getFullYear();
 				tweets.push(tweet) 
