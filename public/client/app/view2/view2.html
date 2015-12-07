@@ -7,10 +7,15 @@
 			  <div class="panel-body">
 			    <p>{{string.text}}</p>
 			  </div>
+			  <div class="row">
+			  		<div class="col-xs-1"></div>
+			  		<div class="col-xs-9"><input class="form-control" placeholder="Enter a comment..." ng-model="tweet.comment"></div>
+					<div class="col-xs-2"><button class="btn btn-primary" ng-click="save()">Save</button></div>
+			  </div>
 
 			  <!-- List group -->
 			  <ul class="list-group">
-			    <li class="list-group-item" ng-repeat = "comment in string.comments">{{comment}}</li>
+			    <li class="list-group-item" ng-repeat = "comment in string.comment">{{comment.text}}</li>
 			  </ul>
 			</div>
 	</div>
