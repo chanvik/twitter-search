@@ -14,7 +14,7 @@ angular.module('myApp.view2', ['ngRoute'])
 	$scope.tweet = {
 		comment : ""
 	};
-	$scope.tweets = {}
+	$scope.tweets = {};
 	(function (){
 		$http.post('/api/v2/twitter/findbyid',{id:$scope.id}).success(formatData);
 	})()
