@@ -19,6 +19,9 @@ Navigate to mongodb folder and run > mongod.
 Open a command prompt and run the command to import the data.
 mongoimport --db twitter --collection tweets --type csv --headerline --file "Your tweets.csv file location"
 
+
+Index the text field of data to be searchable by typing in db.tweets.createIndex({"text":"text"}) into mongo client
+
 #To run the application
 1)Navigate to the project folder >twitter-search and run the command
 node server
